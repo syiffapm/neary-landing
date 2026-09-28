@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pink:        #F20070;
+  --color-pink-deep:   #C8005F;
+  --color-navy:        #001E6C;
+  --color-teal:        #1F8E86;
+  --color-blush:       #FCEAF3;
+  --color-blush-2:     #F6E6EE;
+  --color-body-bg:      #FFFAFC;
+}
+
+body {
+  margin: 0;
+  font-family: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--color-body-bg);
+  color: #1D2347;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-head { font-family: 'Montserrat', system-ui, sans-serif; }
+
+.grad-pink { background: linear-gradient(180deg, #F2338A 0%, #F98CBC 100%); }
+.grad-pink-h { background: linear-gradient(90deg, #F2338A 0%, #F98CBC 100%); }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: floatY 5s ease-in-out infinite; }
